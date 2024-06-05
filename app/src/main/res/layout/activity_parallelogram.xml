@@ -1,0 +1,49 @@
+<!-- res/layout/activity_parallelogram.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość podstawy"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/input_side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość boku"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/input_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj wysokość równoległoboku"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_calculate_parallelogram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/result_parallelogram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+</LinearLayout>

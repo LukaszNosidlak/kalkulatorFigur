@@ -1,0 +1,40 @@
+<!-- res/layout/activity_rectangle.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość prostokąta"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/input_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj szerokość prostokąta"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_calculate_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/result_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+</LinearLayout>

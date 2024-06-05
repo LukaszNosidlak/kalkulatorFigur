@@ -1,0 +1,44 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wybierz figure:" />
+
+    <Button
+        android:id="@+id/btn_square"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kwadrat" />
+
+    <Button
+        android:id="@+id/btn_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prostokąt" />
+
+    <Button
+        android:id="@+id/btn_triangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trójkąt" />
+
+    <Button
+        android:id="@+id/btn_trapezoid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trapez" />
+
+    <Button
+        android:id="@+id/btn_parallelogram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Równoległobok" />
+
+</LinearLayout>

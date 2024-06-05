@@ -1,0 +1,67 @@
+<!-- res/layout/activity_trapezoid.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_base1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość pierwszej podstawy"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/input_base2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość drugiej podstawy"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/input_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj wysokość trapezu"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/input_side1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość pierwszego boku"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/input_side2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj długość drugiego boku"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_calculate_trapezoid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/result_trapezoid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+</LinearLayout>

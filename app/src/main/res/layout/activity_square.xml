@@ -1,0 +1,31 @@
+<!-- res/layout/activity_square.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Podaj bok kwadratu"
+        android:inputType="numberDecimal"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btn_calculate_square"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/result_square"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+</LinearLayout>
