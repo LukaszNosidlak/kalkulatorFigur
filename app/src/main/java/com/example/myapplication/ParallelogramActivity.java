@@ -1,10 +1,10 @@
 package com.example.myapplication;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,11 +31,15 @@ public class ParallelogramActivity extends AppCompatActivity {
                     double base = Double.parseDouble(baseStr);
                     double side = Double.parseDouble(sideStr);
                     double height = Double.parseDouble(heightStr);
-                    double area = base * height;
-                    double perimeter = 2 * (base + side);
+                    if (base > 0 && side > 0 && height > 0) {
+                        double area = base * height;
+                        double perimeter = 2 * (base + side);
 
-                    String result = "Pole: " + formatNumber(area) + "\nObwód: " + formatNumber(perimeter);
-                    resultParallelogram.setText(result);
+                        String result = "Pole: " + formatNumber(area) + "\nObwód: " + formatNumber(perimeter);
+                        resultParallelogram.setText(result );
+                    } else {
+                        Toast.makeText(ParallelogramActivity.this, "Wartości muszą być większe od zera", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -48,4 +52,5 @@ public class ParallelogramActivity extends AppCompatActivity {
             return String.format("%.2f", number);
         }
     }
+
 }

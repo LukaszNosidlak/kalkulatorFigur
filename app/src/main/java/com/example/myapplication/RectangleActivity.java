@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,13 +29,26 @@ public class RectangleActivity extends AppCompatActivity {
                 if (!lengthStr.isEmpty() && !widthStr.isEmpty()) {
                     double length = Double.parseDouble(lengthStr);
                     double width = Double.parseDouble(widthStr);
-                    double area = length * width;
-                    double perimeter = 2 * (length + width);
+                    if (length > 0 && width > 0) {
+                        double area = length * width;
+                        double perimeter = 2 * (length + width);
 
-                    String result = "Pole: " + area + "\nObwód: " + perimeter;
-                    resultRectangle.setText(result);
+                        String result = "Pole: " + formatNumber(area) + "\nObwód: " + formatNumber(perimeter);
+                        resultRectangle.setText(result );
+                    } else {
+                        Toast.makeText(RectangleActivity.this, "Wartości muszą być większe od zera", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
     }
+
+    private String formatNumber(double number) {
+        if (number == (long) number) {
+            return String.format("%d", (long) number);
+        } else {
+            return String.format("%.2f", number);
+        }
+    }
+
 }

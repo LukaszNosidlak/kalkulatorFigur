@@ -1,10 +1,10 @@
 package com.example.myapplication;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,11 +37,15 @@ public class TrapezoidActivity extends AppCompatActivity {
                     double height = Double.parseDouble(heightStr);
                     double side1 = Double.parseDouble(side1Str);
                     double side2 = Double.parseDouble(side2Str);
-                    double area = ((base1 + base2) / 2) * height;
-                    double perimeter = base1 + base2 + side1 + side2;
+                    if (base1 > 0 && base2 > 0 && height > 0 && side1 > 0 && side2 > 0) {
+                        double area = 0.5 * (base1 + base2) * height;
+                        double perimeter = base1 + base2 + side1 + side2;
 
-                    String result = "Pole: " + formatNumber(area) + "\nObwód: " + formatNumber(perimeter);
-                    resultTrapezoid.setText(result);
+                        String result = "Pole: " + formatNumber(area) + "\nObwód: " + formatNumber(perimeter);
+                        resultTrapezoid.setText(result);
+                    } else {
+                        Toast.makeText(TrapezoidActivity.this, "Wartości muszą być większe od zera", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -54,4 +58,5 @@ public class TrapezoidActivity extends AppCompatActivity {
             return String.format("%.2f", number);
         }
     }
+
 }
