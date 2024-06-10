@@ -1,4 +1,5 @@
 package com.example.myapplication;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,14 @@ public class TrapezoidActivity extends AppCompatActivity {
         final EditText inputSide2 = findViewById(R.id.input_side2);
         Button btnCalculate = findViewById(R.id.btn_calculate_trapezoid);
         final TextView resultTrapezoid = findViewById(R.id.result_trapezoid);
+        Button btnBack=findViewById(R.id.btn_back4);
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TrapezoidActivity.this,MainActivity.class));
+            }
+        });
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,14 @@ public class TriangleActivity extends AppCompatActivity {
                 final EditText inputBase = findViewById(R.id.input_base);
                 Button btnCalculate = findViewById(R.id.btn_calculate_triangle);
                 final TextView resultTriangle = findViewById(R.id.result_triangle);
+                Button btnBack=findViewById(R.id.btn_back5);
 
+                btnBack.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                startActivity(new Intent(TriangleActivity.this,MainActivity.class));
+                        }
+                });
                 btnCalculate.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

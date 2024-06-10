@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,14 @@ public class RectangleActivity extends AppCompatActivity {
         final EditText inputWidth = findViewById(R.id.input_width);
         Button btnCalculate = findViewById(R.id.btn_calculate_rectangle);
         final TextView resultRectangle = findViewById(R.id.result_rectangle);
+        Button btnBack=findViewById(R.id.btn_back);
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RectangleActivity.this,MainActivity.class));
+            }
+        });
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

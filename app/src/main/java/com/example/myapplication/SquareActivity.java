@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,14 @@ public class SquareActivity extends AppCompatActivity {
         final EditText inputSide = findViewById(R.id.input_side);
         Button btnCalculate = findViewById(R.id.btn_calculate_square);
         final TextView resultSquare = findViewById(R.id.result_square);
+        Button btnBack=findViewById(R.id.btn_back3);
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SquareActivity.this,MainActivity.class));
+            }
+        });
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
